@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blueprint Schools - Excellence in Islamic Education</title>
+    <meta name="description" content="The Blueprint Schools provides world-class Islamic education from daycare to college level in Nigeria. Excellence in Islamic values and modern education.">
+    
+    <!-- Google Fonts - Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+      <script src="./script.js" defer></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+
+    <!-- Navigation -->
+      <div class="flex justify-between items-center p-4 md:p-6 lg:p-8 sticky top-0 z-50 bg-white shadow-md">
+        <div class="flex justify-between items-center w-full">
+            <div class="flex md:gap-4 gap-2 items-center">
+                  <div class="w-10 h-10 flex items-center justify-center mr-3">
+                            <img src="./Images/BlueprintLogo.png"/>
+                        </div>
+                <div class=" text-xl text-primary-blue tracking-tight">The Blueprint Schools</div>
+            </div>
+            <div class="gap-8  hidden md:flex">
+                <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Home</a>
+                        
+                        <!-- Academics Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Academics <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">College</a>
+                            </div>
+                        </div>
+
+                        <!-- Admission Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Admission <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+                            </div>
+                        </div>
+
+                        <!-- About Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                About <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu w-56">
+                                
+                                <a href="Principal.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                                <a href="Subject.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                                <a href="Staff.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                                <a href="Story.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                                <a href="Offers.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                                <a href="FAQ.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+                            </div>
+                        </div>
+
+                        <a href="Gallery.html" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Gallery</a>
+                        
+                        <button id="contact-btn" class="px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </button>
+                    </div>
+                
+
+            </div>
+        </div>
+        
+        <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
+    <i data-lucide="menu" class="h-6 w-6"></i>
+</button>
+
+    </div>
+
+<!-- Mobile Menu  -->
+ <div id="mobile-menu" class="mobile-menu md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-xs">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Home</a>
+        
+        <!-- Academics Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Academics <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">College</a>
+            </div>
+        </div>
+
+        <!-- Admission Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Admissions <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+            </div>
+        </div>
+
+        <!-- About Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                About us <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                
+                <a href="Principal.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                <a href="Subject.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                <a href="Staff.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                <a href="Story.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                <a href="Offers.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                <a href="FAQ.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+            </div>
+        </div>
+
+        <a href="Gallery.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Gallery</a>
+        <button id="mobile-contact-btn" class="w-full text-left mt-2 px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium">
+            Contact Us
+        </button>
+    </div>
+</div>
+  
+    <!-- Hero Section -->
+  <!-- Main Content -->
+     <section class="bg-blue-900 text-white py-32 px-6 overflow-hidden">
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto text-center z-10">
+            <h1 class="text-5xl mb-4 font-bold">Our Subjects</h1>
+            <p class="text-xl opacity-90">Comprehensive Academic Programs for Secondary School Students</p>
+        </div>
+    </section>
+
+    <!-- Subjects List Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-lg p-8 -mt-32 relative z-20 mb-16">
+                <p class="text-center text-gray-700 max-w-3xl mx-auto">
+                    At The Blueprint Schools, we offer a comprehensive curriculum that combines academic excellence 
+                    with Islamic values. Our subjects are designed to prepare students for WAEC, NECO examinations 
+                    and beyond, while nurturing well-rounded individuals.
+                </p>
+            </div>
+
+            <!-- Core Subjects -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Core Subjects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                                <line x1="8" y1="6" x2="16" y2="6"></line>
+                                <line x1="8" y1="10" x2="16" y2="10"></line>
+                                <line x1="8" y1="14" x2="16" y2="14"></line>
+                                <line x1="8" y1="18" x2="12" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Mathematics</h3>
+                        <p class="text-gray-600 text-sm">Algebra, Geometry, Calculus, Statistics</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">English Language</h3>
+                        <p class="text-gray-600 text-sm">Grammar, Literature, Composition, Comprehension</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                <path d="M12 7v6"></path>
+                                <path d="M10 9h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Islamic Studies</h3>
+                        <p class="text-gray-600 text-sm">Quran, Hadith, Fiqh, Tawheed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sciences -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Sciences</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+                                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Biology</h3>
+                        <p class="text-gray-600 text-sm">Life Sciences, Genetics, Ecology, Human Anatomy</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 2v17.5A2.5 2.5 0 0 1 6.5 22v0A2.5 2.5 0 0 1 4 19.5V2"></path>
+                                <path d="M20 2v17.5a2.5 2.5 0 0 1-2.5 2.5v0a2.5 2.5 0 0 1-2.5-2.5V2"></path>
+                                <path d="M3 2h7"></path>
+                                <path d="M14 2h7"></path>
+                                <path d="M9 16H4"></path>
+                                <path d="M20 16h-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Chemistry</h3>
+                        <p class="text-gray-600 text-sm">Organic, Inorganic, Physical Chemistry</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                                <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                                <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Physics</h3>
+                        <p class="text-gray-600 text-sm">Mechanics, Electricity, Waves, Modern Physics</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Agricultural Science</h3>
+                        <p class="text-gray-600 text-sm">Crop Production, Animal Husbandry, Soil Science</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Sciences & Humanities -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Social Sciences & Humanities</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Geography</h3>
+                        <p class="text-gray-600 text-sm">Physical Geography, Human Geography, Map Reading</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Economics</h3>
+                        <p class="text-gray-600 text-sm">Microeconomics, Macroeconomics, Development Economics</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <path d="M9 22v-4h6v4"></path>
+                                <path d="M8 6h.01"></path>
+                                <path d="M16 6h.01"></path>
+                                <path d="M12 6h.01"></path>
+                                <path d="M12 10h.01"></path>
+                                <path d="M12 14h.01"></path>
+                                <path d="M16 10h.01"></path>
+                                <path d="M16 14h.01"></path>
+                                <path d="M8 10h.01"></path>
+                                <path d="M8 14h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Government</h3>
+                        <p class="text-gray-600 text-sm">Political Systems, Democracy, Governance</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m12 19 7-7 3 3-7 7-3-3z"></path>
+                                <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="m2 2 7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Literature in English</h3>
+                        <p class="text-gray-600 text-sm">Poetry, Prose, Drama, African Literature</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <line x1="10" y1="9" x2="8" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">History</h3>
+                        <p class="text-gray-600 text-sm">Nigerian History, African History, World History</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Civic Education</h3>
+                        <p class="text-gray-600 text-sm">Citizenship, Rights & Responsibilities, Democracy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Languages</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m5 8 6 6"></path>
+                                <path d="m4 14 6-6 2-3"></path>
+                                <path d="M2 5h12"></path>
+                                <path d="M7 2h1"></path>
+                                <path d="m22 22-5-10-5 10"></path>
+                                <path d="M14 18h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Arabic Language</h3>
+                        <p class="text-gray-600 text-sm">Reading, Writing, Grammar, Islamic Texts</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m5 8 6 6"></path>
+                                <path d="m4 14 6-6 2-3"></path>
+                                <path d="M2 5h12"></path>
+                                <path d="M7 2h1"></path>
+                                <path d="m22 22-5-10-5 10"></path>
+                                <path d="M14 18h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">French</h3>
+                        <p class="text-gray-600 text-sm">Grammar, Conversation, French Literature</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m5 8 6 6"></path>
+                                <path d="m4 14 6-6 2-3"></path>
+                                <path d="M2 5h12"></path>
+                                <path d="M7 2h1"></path>
+                                <path d="m22 22-5-10-5 10"></path>
+                                <path d="M14 18h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Yoruba</h3>
+                        <p class="text-gray-600 text-sm">Local Language Studies, Culture & Literature</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vocational & Technical -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Vocational & Technical Subjects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Computer Studies</h3>
+                        <p class="text-gray-600 text-sm">Programming, Digital Literacy, ICT</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m12 19 7-7 3 3-7 7-3-3z"></path>
+                                <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="m2 2 7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Technical Drawing</h3>
+                        <p class="text-gray-600 text-sm">Engineering Drawing, Design, CAD</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Business Studies</h3>
+                        <p class="text-gray-600 text-sm">Commerce, Accounting, Entrepreneurship</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Home Economics</h3>
+                        <p class="text-gray-600 text-sm">Food & Nutrition, Clothing & Textiles</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Arts -->
+            <div class="mb-16">
+                <h2 class="text-3xl mb-8 text-blue-600">Creative Arts & Physical Education</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="9" cy="9" r="2"></circle>
+                                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Fine Arts</h3>
+                        <p class="text-gray-600 text-sm">Drawing, Painting, Sculpture, Art History</p>
+                    </div>
+
+                    
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                            <svg class="text-blue-600" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl mb-2">Physical & Health Education</h3>
+                        <p class="text-gray-600 text-sm">Sports, Fitness, Health Science</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="bg-blue-50 rounded-2xl p-8 mt-12">
+                <h2 class="text-center text-2xl mb-6">Academic Levels</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl mb-3 text-blue-600">Creche & Nursery</h3>
+                        <p class="text-gray-600 text-sm">
+                            Early childhood education focusing on foundational skills, social development, and 
+                            Islamic values. Play-based learning for ages 1-5.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl mb-3 text-blue-600">Primary School</h3>
+                        <p class="text-gray-600 text-sm">
+                            Basic education covering core subjects including Mathematics, English, Islamic Studies, 
+                            and other foundational subjects for holistic development.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl mb-3 text-blue-600">Junior Secondary (JSS 1-3)</h3>
+                        <p class="text-gray-600 text-sm">
+                            Foundation years covering all core subjects, sciences, humanities, and introductory 
+                            vocational studies. Students build fundamental knowledge across all subject areas.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl mb-3 text-blue-600">Senior Secondary (SSS 1-3)</h3>
+                        <p class="text-gray-600 text-sm">
+                            Specialized education with students choosing between Science, Commercial, or Arts tracks. 
+                            Focused preparation for WAEC and NECO examinations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-white text-lg">BP</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">The Blueprint Schools</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        The Citadel of Wisdom and Knowledge. Nurturing young minds with 
+                        Islamic values and academic excellence from daycare to college level.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/academics" class="text-gray-300 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="/admission" class="text-gray-300 hover:text-white transition-colors">Admission</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Academics -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Academic Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/daycare" class="text-gray-300 hover:text-white transition-colors">Daycare Program</a></li>
+                        <li><a href="/nursery" class="text-gray-300 hover:text-white transition-colors">Nursery School</a></li>
+                        <li><a href="/primary" class="text-gray-300 hover:text-white transition-colors">Primary Education</a></li>
+                        <li><a href="/college" class="text-gray-300 hover:text-white transition-colors">College Level</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Contact Information</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-accent-yellow mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">
+                                    1, Alhaji Azeez Osundiji<br />
+                                    Close, Off F,Kiki Street<br />
+                                    Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="phone" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="tel:+2348060039627" class="text-gray-300 hover:text-white transition-colors">
+                                +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="blueprintnurseryandprimary@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+                                blueprintnurseryandprimary@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 The Blueprint Schools. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="/sitemap" class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b bg-primary-blue">
+                <h2 class="text-2xl text-white font-semibold">Contact The Blueprint Schools</h2>
+                <button id="close-modal" class="text-white hover:text-gray-200 transition-colors">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="contact-form" class="p-6 space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your full name"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your email"
+                        />
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your phone number"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject *</label>
+                        <select
+                            id="subject"
+                            name="subject"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        >
+                            <option value="">Select a subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="daycare">Daycare Program</option>
+                            <option value="nursery">Nursery Program</option>
+                            <option value="primary">Primary Education</option>
+                            <option value="college">College Program</option>
+                            <option value="facilities">School Facilities</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="boarding">Boarding Facilities</option>
+                            <option value="fees">School Fees</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="5"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        placeholder="Please provide details about your inquiry..."
+                    ></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button 
+                        type="submit"
+                        class="flex-1 bg-primary-blue text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center justify-center"
+                    >
+                        <i data-lucide="send" class="h-4 w-4 mr-2"></i>
+                        Send Message
+                    </button>
+                    <button 
+                        type="button"
+                        id="cancel-btn"
+                        class="flex-1 border-2 border-primary-blue text-primary-blue px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="bg-gray-50 p-6 rounded-b-lg">
+                <h3 class="font-semibold mb-4 text-primary-blue">Or reach us directly:</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                    <div>
+                        <strong>Phone:</strong><br />
+                        +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                    </div>
+                    <div>
+                        <strong>Email:</strong><br />
+                        blueprintnursery<br /> andprimarysch<br />@gmail.com
+                    </div>
+                    <div>
+                        <strong>Address:</strong><br />
+                        Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

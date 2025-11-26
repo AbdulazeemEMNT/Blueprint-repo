@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blueprint Schools - Excellence in Islamic Education</title>
+    <meta name="description" content="The Blueprint Schools provides world-class Islamic education from daycare to college level in Nigeria. Excellence in Islamic values and modern education.">
+    
+    <!-- Google Fonts - Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+      <script src="./script.js" defer></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+
+    <!-- Navigation -->
+      <div class="flex justify-between items-center p-4 md:p-6 lg:p-8 sticky top-0 z-50 bg-white shadow-md">
+        <div class="flex justify-between items-center w-full">
+            <div class="flex md:gap-4 gap-2 items-center">
+                  <div class="w-10 h-10 flex items-center justify-center mr-3">
+                            <img src="./Images/BlueprintLogo.png"/>
+                        </div>
+                <div class=" text-xl text-primary-blue tracking-tight">The Blueprint Schools</div>
+            </div>
+            <div class="gap-8  hidden md:flex">
+                <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Home</a>
+                        
+                        <!-- Academics Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Academics <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">College</a>
+                            </div>
+                        </div>
+
+                        <!-- Admission Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Admission <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+                            </div>
+                        </div>
+
+                        <!-- About Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                About <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu w-56">
+                                
+                                <a href="Principal.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                                <a href="Subject.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                                <a href="Staff.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                                <a href="Story.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                                <a href="Offers.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                                <a href="FAQ.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+                            </div>
+                        </div>
+
+                        <a href="Gallery.html" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Gallery</a>
+                        
+                        <button id="contact-btn" class="px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </button>
+                    </div>
+                
+
+            </div>
+        </div>
+        
+        <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
+    <i data-lucide="menu" class="h-6 w-6"></i>
+</button>
+
+    </div>
+
+<!-- Mobile Menu  -->
+ <div id="mobile-menu" class="mobile-menu md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-xs">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Home</a>
+        
+        <!-- Academics Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Academics <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">College</a>
+            </div>
+        </div>
+
+        <!-- Admission Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Admissions <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+            </div>
+        </div>
+
+        <!-- About Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                About us <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                
+                <a href="Principal.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                <a href="Subject.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                <a href="Staff.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                <a href="Story.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                <a href="Offers.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                <a href="FAQ.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+            </div>
+        </div>
+
+        <a href="Gallery.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Gallery</a>
+        <button id="mobile-contact-btn" class="w-full text-left mt-2 px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium">
+            Contact Us
+        </button>
+    </div>
+</div>
+  
+  
+
+    <!-- Hero Section -->
+    <div class="bg-blue-900 text-white py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-900"></div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl mb-4 font-bold">Frequently Asked Questions</h1>
+            <p class="text-white-600 text-lg max-w-3xl mx-auto">
+                    We've compiled answers to some of the questions parents and students often ask 
+                    to help you get started with us easily.
+                </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+   <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- FAQ Accordion -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(1)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            How can I apply for admission?
+                        </span>
+                        <svg 
+                            id="icon-1" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-1" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            You can apply by completing the online admission form available on our website or by visiting the school's admission office. Once the form is submitted, our admission team will contact you with details on entrance exams, interviews, and next steps.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(2)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            What curriculum does the school follow?
+                        </span>
+                        <svg 
+                            id="icon-2" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-2" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Our school follows a comprehensive curriculum that combines national standards with international best practices, ensuring students receive a well-rounded education that prepares them for global opportunities.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(3)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            What are the school hours?
+                        </span>
+                        <svg 
+                            id="icon-3" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-3" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Regular school hours are from 8:00 AM to 3:00 PM, Monday through Friday. Extended care programs are available for families who need earlier drop-off or later pick-up times.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(4)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            Does the school provide transportation?
+                        </span>
+                        <svg 
+                            id="icon-4" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-4" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Yes, we offer safe and reliable transportation services covering multiple routes throughout the area. Our buses are well-equipped and supervised by trained staff to ensure student safety.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(5)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            How can parents stay updated on their child's progress?
+                        </span>
+                        <svg 
+                            id="icon-5" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-5" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Parents can access class teachers physically or through mail for real-time updates on grades, attendance, and assignments. We also provide regular progress reports, parent-teacher meetings, and maintain open communication through email and phone calls.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-white text-lg">BP</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">The Blueprint Schools</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        The Citadel of Wisdom and Knowledge. Nurturing young minds with 
+                        Islamic values and academic excellence from daycare to college level.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/academics" class="text-gray-300 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="/admission" class="text-gray-300 hover:text-white transition-colors">Admission</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Academics -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Academic Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/daycare" class="text-gray-300 hover:text-white transition-colors">Daycare Program</a></li>
+                        <li><a href="/nursery" class="text-gray-300 hover:text-white transition-colors">Nursery School</a></li>
+                        <li><a href="/primary" class="text-gray-300 hover:text-white transition-colors">Primary Education</a></li>
+                        <li><a href="/college" class="text-gray-300 hover:text-white transition-colors">College Level</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Contact Information</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-accent-yellow mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">
+                                    1, Alhaji Azeez Osundiji<br />
+                                    Close, Off F,Kiki Street<br />
+                                    Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="phone" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="tel:+2348060039627" class="text-gray-300 hover:text-white transition-colors">
+                                +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="blueprintnurseryandprimary@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+                                blueprintnurseryandprimary@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 The Blueprint Schools. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="/sitemap" class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b bg-primary-blue">
+                <h2 class="text-2xl text-white font-semibold">Contact The Blueprint Schools</h2>
+                <button id="close-modal" class="text-white hover:text-gray-200 transition-colors">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="contact-form" class="p-6 space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your full name"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your email"
+                        />
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your phone number"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject *</label>
+                        <select
+                            id="subject"
+                            name="subject"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        >
+                            <option value="">Select a subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="daycare">Daycare Program</option>
+                            <option value="nursery">Nursery Program</option>
+                            <option value="primary">Primary Education</option>
+                            <option value="college">College Program</option>
+                            <option value="facilities">School Facilities</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="boarding">Boarding Facilities</option>
+                            <option value="fees">School Fees</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="5"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        placeholder="Please provide details about your inquiry..."
+                    ></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button 
+                        type="submit"
+                        class="flex-1 bg-primary-blue text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center justify-center"
+                    >
+                        <i data-lucide="send" class="h-4 w-4 mr-2"></i>
+                        Send Message
+                    </button>
+                    <button 
+                        type="button"
+                        id="cancel-btn"
+                        class="flex-1 border-2 border-primary-blue text-primary-blue px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="bg-gray-50 p-6 rounded-b-lg">
+                <h3 class="font-semibold mb-4 text-primary-blue">Or reach us directly:</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                    <div>
+                        <strong>Phone:</strong><br />
+                        +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                    </div>
+                    <div>
+                        <strong>Email:</strong><br />
+                        blueprintnursery<br /> andprimarysch<br />@gmail.com
+                    </div>
+                    <div>
+                        <strong>Address:</strong><br />
+                        Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blueprint Schools - Excellence in Islamic Education</title>
+    <meta name="description" content="The Blueprint Schools provides world-class Islamic education from daycare to college level in Nigeria. Excellence in Islamic values and modern education.">
+    
+    <!-- Google Fonts - Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+      <script src="./script.js" defer></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center p-4 md:p-6 lg:p-8 sticky top-0 z-50 bg-white shadow-md">
+        <div class="flex justify-between items-center w-full">
+            <div class="flex md:gap-4 gap-2 items-center">
+                  <div class="w-10 h-10 flex items-center justify-center mr-3">
+                            <img src="./Images/BlueprintLogo.png"/>
+                        </div>
+                <div class=" text-xl text-primary-blue tracking-tight">The Blueprint Schools</div>
+            </div>
+            <div class="gap-8  hidden md:flex">
+                <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Home</a>
+                        
+                        <!-- Academics Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Academics <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                                <a href="Class.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">College</a>
+                            </div>
+                        </div>
+
+                        <!-- Admission Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                Admission <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                                <a href="Admission.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+                            </div>
+                        </div>
+
+                        <!-- About Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors flex items-center">
+                                About <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
+                            </button>
+                            <div class="dropdown-menu w-56">
+                               
+                                <a href="Principal.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                                <a href="Subject.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                                <a href="Staff.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                                <a href="Story.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                                <a href="Offers.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                                <a href="FAQ.html" class="block px-4 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+                            </div>
+                        </div>
+
+                        <a href="#gallery" class="px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 transition-colors">Gallery</a>
+                        
+                        <button id="contact-btn" class="px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </button>
+                    </div>
+                
+
+            </div>
+        </div>
+        
+        <button id="mobile-menu-btn" class="md:hidden text-primary-blue">
+    <i data-lucide="menu" class="h-6 w-6"></i>
+</button>
+
+    </div>
+
+<!-- Mobile Menu  -->
+ <div id="mobile-menu" class="mobile-menu md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-xs">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Home</a>
+        
+        <!-- Academics Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Academics <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Daycare</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Nursery</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Primary</a>
+                <a href="Class.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">College</a>
+            </div>
+        </div>
+
+        <!-- Admission Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                Admissions <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Enquiry</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Fee</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Admission Process</a>
+                <a href="Admission.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Boarding Facilities</a>
+            </div>
+        </div>
+
+        <!-- About Mobile Dropdown -->
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full text-left px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50 flex justify-between items-center">
+                About us <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <div class="mobile-dropdown-menu hidden pl-6 space-y-1">
+                
+                <a href="Principal.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Principal Address</a>
+                <a href="Subject.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Subjects Taught</a>
+                <a href="Staff.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Teachers</a>
+                <a href="Story.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Story</a>
+                <a href="Offers.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">Our Offers</a>
+                <a href="FAQ.html" class="block px-3 py-2 text-primary-blue hover:bg-blue-50">FAQs</a>
+            </div>
+        </div>
+
+        <a href="Gallery.html" class="block px-3 py-2 rounded-md text-primary-blue hover:bg-blue-50">Gallery</a>
+        <button id="mobile-contact-btn" class="w-full text-left mt-2 px-4 py-2 rounded-md bg-accent-yellow text-primary-blue font-medium">
+            Contact Us
+        </button>
+    </div>
+</div>
+  
+
+    <!-- Hero Section -->
+     <section id="home" class="relative bg-blue-600 text-white py-24 md:py-32" style="background-image: linear-gradient(rgba(37, 99, 235, 0.85), rgba(29, 78, 216, 0.85)), url('./Images/compound.jpg'); background-size: cover; background-position: center;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Excellence in Islamic Education
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-blue-50">
+                        At Blueprint Schools, we are dedicated to providing a comprehensive Islamic
+                        education that nurtures both spiritual growth and academic excellence. Our mission is to
+                        develop well-rounded students who are prepared to contribute positively to society while
+                        maintaining strong Islamic values.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="max-w-xl mx-auto bg-white rounded-lg p-2 flex items-center gap-2">
+                        <svg class="text-gray-400 ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" placeholder="Search courses, programs..." class="flex-1 outline-none text-gray-700 px-2 py-2">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-md transition-colors">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Available Classes Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold mb-4 text-primary-blue">Available Classes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From early childhood to college preparation, we offer comprehensive Islamic education 
+                    at every stage of your child's development.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Daycare Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img
+                        src="./Images/kids.jpg"
+                        alt="Daycare"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-primary-blue">Daycare</h3>
+                            <span class="px-2 py-1 text-xs rounded-full bg-accent-yellow text-primary-blue">6 months - 2 years</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Nurturing care for children aged 6 months to 2 years with Islamic values and early childhood development.
+                        </p>
+                        <a href="Class.html" class="w-full block text-center px-4 py-2 border border-primary-blue text-primary-blue rounded-md hover:bg-blue-50 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nursery Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img
+                        src="./Images/classroom2.jpg"
+                        alt="Nursery"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-primary-blue">Nursery</h3>
+                            <span class="px-2 py-1 text-xs rounded-full bg-accent-yellow text-primary-blue">2 - 5 years</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Foundation learning with play-based activities, Quran recitation, and basic Islamic teachings for young minds.
+                        </p>
+                        <a href="Class.html" class="w-full block text-center px-4 py-2 border border-primary-blue text-primary-blue rounded-md hover:bg-blue-50 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Primary Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img
+                        src="./Images/student.jpg"
+                        alt="Primary"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-primary-blue">Primary</h3>
+                            <span class="px-2 py-1 text-xs rounded-full bg-accent-yellow text-primary-blue">6 - 11 years</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Comprehensive primary education combining Nigerian curriculum with Islamic studies, Arabic, and moral education.
+                        </p>
+                        <a href="Class.html" class="w-full block text-center px-4 py-2 border border-primary-blue text-primary-blue rounded-md hover:bg-blue-50 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- College Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <img
+                        src="./Images/classroom.jpg"
+                        alt="College"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-primary-blue">College</h3>
+                            <span class="px-2 py-1 text-xs rounded-full bg-accent-yellow text-primary-blue">12 - 18 years</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Advanced secondary education preparing students for university with strong Islamic foundation and academic excellence.
+                        </p>
+                        <a href="Class.html" class="w-full block text-center px-4 py-2 border border-primary-blue text-primary-blue rounded-md hover:bg-blue-50 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Address Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-semibold mb-6 text-primary-blue">A Message from Our Principal</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Assalamu Alaikum and welcome to The Blueprint Schools family. As the Principal of this esteemed institution, 
+                            I am honored to lead a school that has been shaping young minds with Islamic values and academic excellence 
+                            for over a decade.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our mission extends beyond traditional education. We strive to nurture confident, compassionate, and 
+                            knowledgeable individuals who will become positive contributors to society while maintaining their 
+                            Islamic identity and values.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            At The Blueprint Schools, we believe that every child is unique and has the potential to achieve greatness. 
+                            Our dedicated team of educators works tirelessly to provide a supportive environment where students can...
+                        </p>
+                    </div>
+                    <a href="/principal-address" class="inline-block px-6 py-3 bg-primary-blue text-white rounded-md hover:opacity-90 transition-opacity">
+                        Read Full Message
+                    </a>
+                </div>
+
+                <!-- Right Content - Principal Photo -->
+                  <!-- Decorative Quote -->
+                    <!-- <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg max-w-xs">
+                        <blockquote class="text-sm italic text-primary-blue">
+                            "Education is the most powerful weapon which you can use to change the world, and with Islamic values, we shape better leaders."
+                        </blockquote>
+                        <cite class="text-xs text-gray-500 mt-2 block">- Dr. Amina Hassan, Principal</cite>
+                    </div> -->
+                    
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img
+                            src="./Images/Principal.jpg"
+                            alt="School Principal"
+                            class="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-100 to-yellow-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold mb-4 text-primary-blue">Our Vision & Mission</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Guided by Islamic principles, we aim to create a generation of knowledgeable, 
+                    ethical, and successful individuals.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vision Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 h-full">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="eye" class="h-8 w-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-primary-blue">Our Vision</h3>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            To be the leading Islamic educational institution in Nigeria, recognized for academic excellence, 
+                            moral integrity, and producing graduates who are confident, compassionate, and globally competitive.
+                        </p>
+                        <p class="text-gray-600">
+                            We envision a future where our students become leaders in their fields while maintaining 
+                            strong Islamic values and contributing positively to society.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 h-full">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="target" class="h-8 w-8 text-primary-blue"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-primary-blue">Our Mission</h3>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            To provide quality Islamic education that integrates contemporary learning with traditional 
+                            Islamic values, fostering academic excellence, character development, and spiritual growth.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent-yellow rounded-full mr-3 mt-2"></span>
+                                Nurture Islamic identity and values
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent-yellow rounded-full mr-3 mt-2"></span>
+                                Promote academic excellence and critical thinking
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent-yellow rounded-full mr-3 mt-2"></span>
+                                Develop responsible global citizens
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-semibold mb-6 text-primary-blue">About The Blueprint Schools</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Established in 2010, The Blueprint Schools has been at the forefront of Islamic education 
+                            in Nigeria, providing comprehensive learning experiences that balance academic excellence 
+                            with strong Islamic values.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our institution serves students from daycare through college level, offering a nurturing 
+                            environment where young minds can grow intellectually, spiritually, and socially. We pride 
+                            ourselves on our holistic approach to education that prepares students for success in both 
+                            this world and the hereafter.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            With state-of-the-art facilities, experienced educators, and a curriculum that meets 
+                            international standards while maintaining Islamic authenticity, we continue to be the 
+                            preferred choice for families seeking quality Islamic education.
+                        </p>
+                    </div>
+                    <a href="Story.html" class="inline-block px-6 py-3 bg-primary-blue text-white rounded-md hover:opacity-90 transition-opacity">
+                        Read Our Full Story
+                    </a>
+                </div>
+
+                <!-- Right Content - School Image & Stats -->
+                <div class="space-y-6">
+                    <img
+                        src="./Images/compound2.jpg"
+                        alt="The Blueprint Schools building"
+                        class="rounded-lg shadow-xl w-full h-80 object-cover"
+                    />
+                    
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-100 p-4 rounded-lg text-center">
+                            <i data-lucide="users" class="h-8 w-8 mx-auto mb-2 text-accent-yellow"></i>
+                            <div class="text-2xl font-semibold mb-1 text-primary-blue">500+</div>
+                            <div class="text-sm text-gray-600">Students Enrolled</div>
+                        </div>
+                        <div class="bg-gray-200 p-4 rounded-lg text-center">
+                            <i data-lucide="book-open" class="h-8 w-8 mx-auto mb-2 text-accent-yellow"></i>
+                            <div class="text-2xl font-semibold mb-1 text-primary-blue">15+</div>
+                            <div class="text-sm text-gray-600">Years of Excellence</div>
+                        </div>
+                        <div class="bg-gray-200 p-4 rounded-lg text-center">
+                            <i data-lucide="award" class="h-8 w-8 mx-auto mb-2 text-accent-yellow"></i>
+                            <div class="text-2xl font-semibold mb-1 text-primary-blue">45+</div>
+                            <div class="text-sm text-gray-600">Certified Teachers</div>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg text-center">
+                            <i data-lucide="globe" class="h-8 w-8 mx-auto mb-2 text-accent-yellow"></i>
+                            <div class="text-2xl font-semibold mb-1 text-primary-blue">1000+</div>
+                            <div class="text-sm text-gray-600">Success Stories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Offers Section -->
+    <section class="py-20 bg-gradient-to-br from-yellow-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold mb-4 text-primary-blue">Our Unique Offers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive educational services and facilities designed to support 
+                    every aspect of your child's development and learning journey.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Computer Literacy -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="computer" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Computer Literacy</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Modern computer education and digital literacy programs to prepare students for the digital age.
+                    </p>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="languages" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Arabic & French Language</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Comprehensive language education in Arabic for Islamic studies and French for global communication.
+                    </p>
+                </div>
+
+                <!-- Medical Services -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Medical & Counselling Services</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Professional medical care and psychological counselling services for student wellbeing.
+                    </p>
+                </div>
+
+                <!-- Green Environment -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trees" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Green Learning Environment</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Eco-friendly campus with beautiful gardens and clean, healthy learning spaces.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mt-6">
+                <!-- Experienced Teachers -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="graduation-cap" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Experienced Teachers</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Blend of seasoned, certified, and experienced educators dedicated to student success.
+                    </p>
+                </div>
+
+                <!-- Teaching Methods -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="book-open" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Appropriate Teaching Methods</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Age-appropriate and level-specific teaching methodologies for effective learning.
+                    </p>
+                </div>
+
+                <!-- Transportation -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center h-full">
+                    <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="bus" class="h-8 w-8 text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-primary-blue">Transportation & Boarding</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Safe transportation services and comfortable boarding facilities for students.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">
+                    Interested in learning more about our comprehensive educational offerings?
+                </p>
+                <a href="/our-offers" class="inline-block px-8 py-3 rounded-lg bg-primary-blue text-white hover:opacity-90 transition-opacity">
+                    Explore All Our Offers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold mb-4 text-primary-blue">School Gallery</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Take a visual journey through our modern facilities, vibrant classrooms, 
+                    and the joyful learning experiences of our students.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/staff.jpg"
+                        alt="Interactive Learning Session"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">Our Staff</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/excursion.jpg"
+                        alt="Excursion"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">Excursion</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/studentpract.jpg"
+                        alt="Practical Class"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">Practical Class</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/studentaward.jpg"
+                        alt="Early Learning Center"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">Student with Award</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/compound3.jpg"
+                        alt="School Campus"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">School Campus</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img
+                        src="./Images/classroom2.jpg"
+                        alt="Nursery Classroom"
+                        class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-semibold">Nursery Classroom</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="Gallery.html" class="inline-block px-8 py-3 rounded-lg bg-primary-blue text-white hover:opacity-90 transition-opacity">
+                    View Complete Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-semibold mb-4 text-primary-blue">What Families Say About Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Don't just take our word for it. Hear from parents and students who have 
+                    experienced the excellence of The Blueprint Schools firsthand.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <i data-lucide="quote" class="h-8 w-8 text-accent-yellow opacity-20"></i>
+                    </div>
+                    
+                    <div class="flex items-center mb-6 relative z-10">
+                        <img
+                            src="https://images.unsplash.com/photo-1613632453420-4144fff27cf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwcGFyZW50JTIwY2hpbGQlMjBzY2hvb2x8ZW58MXx8fHwxNzU4Mzc3NTIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Fatima Abdullahi"
+                            class="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="text-lg font-semibold text-primary-blue">Fatima Abdullahi</h4>
+                            <p class="text-gray-600 text-sm">Parent - Primary 5 Student</p>
+                            <div class="flex items-center mt-1">
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-gray-700 italic leading-relaxed">
+                        "The Blueprint Schools has transformed my daughter's life. The balance between Islamic values and modern education is exactly what I was looking for. The teachers are caring and professional."
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <i data-lucide="quote" class="h-8 w-8 text-accent-yellow opacity-20"></i>
+                    </div>
+                    
+                    <div class="flex items-center mb-6 relative z-10">
+                        <img
+                            src="https://images.unsplash.com/photo-1565490129165-bd6a24996c25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwbmlnZXJpYW4lMjBzdHVkZW50cyUyMHRleHRib29rcyUyMHNtaWxpbmd8ZW58MXx8fHwxNzU4Mzc3NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Ahmed Musa"
+                            class="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="text-lg font-semibold text-primary-blue">Ahmed Musa</h4>
+                            <p class="text-gray-600 text-sm">College Graduate - Class of 2023</p>
+                            <div class="flex items-center mt-1">
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-gray-700 italic leading-relaxed">
+                        "Studying at The Blueprint Schools prepared me well for university. The computer literacy program and Arabic classes gave me advantages over my peers. I'm grateful for the foundation I received here."
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <i data-lucide="quote" class="h-8 w-8 text-accent-yellow opacity-20"></i>
+                    </div>
+                    
+                    <div class="flex items-center mb-6 relative z-10">
+                        <img
+                            src="https://images.unsplash.com/photo-1613632453420-4144fff27cf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwcGFyZW50JTIwY2hpbGQlMjBzY2hvb2x8ZW58MXx8fHwxNzU4Mzc3NTIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Khadija Ibrahim"
+                            class="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="text-lg font-semibold text-primary-blue">Khadija Ibrahim</h4>
+                            <p class="text-gray-600 text-sm">Parent - Nursery Student</p>
+                            <div class="flex items-center mt-1">
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-gray-700 italic leading-relaxed">
+                        "The nursery program is exceptional. My son loves going to school every day. The Islamic environment and the care he receives from teachers make me confident in my choice."
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-8 relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <i data-lucide="quote" class="h-8 w-8 text-accent-yellow opacity-20"></i>
+                    </div>
+                    
+                    <div class="flex items-center mb-6 relative z-10">
+                        <img
+                            src="https://images.unsplash.com/photo-1613632453420-4144fff27cf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwcGFyZW50JTIwY2hpbGQlMjBzY2hvb2x8ZW58MXx8fHwxNzU4Mzc3NTIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Usman Aliyu"
+                            class="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="text-lg font-semibold text-primary-blue">Usman Aliyu</h4>
+                            <p class="text-gray-600 text-sm">Parent - Primary 3 Student</p>
+                            <div class="flex items-center mt-1">
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-accent-yellow fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-gray-700 italic leading-relaxed">
+                        "The transportation service is reliable and safe. The boarding facilities are excellent for students from other states. The school truly cares about every student's wellbeing and success."
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">
+                    Ready to join our community of satisfied families?
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="schedule-visit-btn" class="px-8 py-3 rounded-lg bg-primary-blue text-white hover:opacity-90 transition-opacity">
+                        Schedule a Visit
+                    </button>
+                    <a href="/testimonials" class="px-8 py-3 rounded-lg border-2 border-primary-blue text-primary-blue hover:bg-blue-50 transition-colors">
+                        Read More Stories
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+   <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    We've compiled answers to some of the questions parents and students often ask 
+                    to help you get started with us easily.
+                </p>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(1)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            How can I apply for admission?
+                        </span>
+                        <svg 
+                            id="icon-1" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-1" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            You can apply by completing the online admission form available on our website or by visiting the school's admission office. Once the form is submitted, our admission team will contact you with details on entrance exams, interviews, and next steps.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(2)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            What curriculum does the school follow?
+                        </span>
+                        <svg 
+                            id="icon-2" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-2" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Our school follows a comprehensive curriculum that combines national standards with international best practices, ensuring students receive a well-rounded education that prepares them for global opportunities.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(3)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            What are the school hours?
+                        </span>
+                        <svg 
+                            id="icon-3" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-3" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Regular school hours are from 8:00 AM to 3:00 PM, Monday through Friday. Extended care programs are available for families who need earlier drop-off or later pick-up times.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(4)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            Does the school provide transportation?
+                        </span>
+                        <svg 
+                            id="icon-4" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-4" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Yes, we offer safe and reliable transportation services covering multiple routes throughout the area. Our buses are well-equipped and supervised by trained staff to ensure student safety.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button 
+                        onclick="toggleFAQ(5)"
+                        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="text-lg font-semibold text-gray-900">
+                            How can parents stay updated on their child's progress?
+                        </span>
+                        <svg 
+                            id="icon-5" 
+                            class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div 
+                        id="content-5" 
+                        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                            Parents can access class teachers physically or through mail for real-time updates on grades, attendance, and assignments. We also provide regular progress reports, parent-teacher meetings, and maintain open communication through email and phone calls.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-white text-lg">BP</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">The Blueprint Schools</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        The Citadel of Wisdom and Knowledge. Nurturing young minds with 
+                        Islamic values and academic excellence from daycare to college level.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/academics" class="text-gray-300 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="/admission" class="text-gray-300 hover:text-white transition-colors">Admission</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Academics -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Academic Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/daycare" class="text-gray-300 hover:text-white transition-colors">Daycare Program</a></li>
+                        <li><a href="/nursery" class="text-gray-300 hover:text-white transition-colors">Nursery School</a></li>
+                        <li><a href="/primary" class="text-gray-300 hover:text-white transition-colors">Primary Education</a></li>
+                        <li><a href="/college" class="text-gray-300 hover:text-white transition-colors">College Level</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-accent-yellow">Contact Information</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-accent-yellow mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">
+                                    1, Alhaji Azeez Osundiji<br />
+                                    Close, Off F,Kiki Street<br />
+                                    Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="phone" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="tel:+2348060039627" class="text-gray-300 hover:text-white transition-colors">
+                                +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="h-5 w-5 text-accent-yellow mr-3"></i>
+                            <a href="blueprintnurseryandprimary@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+                                blueprintnurseryandprimary@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 The Blueprint Schools. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="/sitemap" class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b bg-primary-blue">
+                <h2 class="text-2xl text-white font-semibold">Contact The Blueprint Schools</h2>
+                <button id="close-modal" class="text-white hover:text-gray-200 transition-colors">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="contact-form" class="p-6 space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your full name"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your email"
+                        />
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="Enter your phone number"
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject *</label>
+                        <select
+                            id="subject"
+                            name="subject"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        >
+                            <option value="">Select a subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="daycare">Daycare Program</option>
+                            <option value="nursery">Nursery Program</option>
+                            <option value="primary">Primary Education</option>
+                            <option value="college">College Program</option>
+                            <option value="facilities">School Facilities</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="boarding">Boarding Facilities</option>
+                            <option value="fees">School Fees</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="5"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        placeholder="Please provide details about your inquiry..."
+                    ></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button 
+                        type="submit"
+                        class="flex-1 bg-primary-blue text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center justify-center"
+                    >
+                        <i data-lucide="send" class="h-4 w-4 mr-2"></i>
+                        Send Message
+                    </button>
+                    <button 
+                        type="button"
+                        id="cancel-btn"
+                        class="flex-1 border-2 border-primary-blue text-primary-blue px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="bg-gray-50 p-6 rounded-b-lg">
+                <h3 class="font-semibold mb-4 text-primary-blue">Or reach us directly:</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                    <div>
+                        <strong>Phone:</strong><br />
+                        +234 806 003 9627<br />
+                                +234 802 492 2177<br />
+                                +234 901 202 7553
+                    </div>
+                    <div>
+                        <strong>Email:</strong><br />
+                        blueprintnursery<br /> andprimarysch<br />@gmail.com
+                    </div>
+                    <div>
+                        <strong>Address:</strong><br />
+                        Ogungbe Estate, 2nd Cele, Badagry Lagos State.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="relative max-w-4xl max-h-full">
+            <button id="close-gallery" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+                <i data-lucide="x" class="h-8 w-8"></i>
+            </button>
+            <img id="gallery-image" src="" alt="Gallery image" class="max-w-full max-h-full object-contain" />
+        </div>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,310 @@
+:root {
+  --primary-blue: #0047ab;
+  --accent-yellow: #ffd700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 32rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Gallery Modal */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gallery-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.gallery-modal img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  min-width: 12rem;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Custom Colors */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.bg-accent-yellow {
+  background-color: var(--accent-yellow);
+}
+
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+
+.text-accent-yellow {
+  color: var(--accent-yellow);
+}
+
+.border-primary-blue {
+  border-color: var(--primary-blue);
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+.rotate-12 {
+  transform: rotate(12deg);
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rotate-6 {
+  transform: rotate(6deg);
+}
+
+.-rotate-12 {
+  transform: rotate(-12deg);
+}
+
+.-rotate-6 {
+  transform: rotate(-6deg);
+}
+
+.-rotate-45 {
+  transform: rotate(-45deg);
+}
+
+.rotate-30 {
+  transform: rotate(30deg);
+}
+
+.-rotate-15 {
+  transform: rotate(-15deg);
+}
+
+/* Educational doodle colors */
+.text-blue-200 {
+  color: #bfdbfe;
+}
+
+.text-blue-300 {
+  color: #93c5fd;
+}
+
+.text-blue-400 {
+  color: #60a5fa;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.text-yellow-300 {
+  color: #fde047;
+}
+
+.text-yellow-400 {
+  color: #facc15;
+}
+
+.text-yellow-500 {
+  color: #eab308;
+}
+
+.text-white {
+  color: white;
+}
+
+.opacity-15 {
+  opacity: 0.15;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Hide mobile menu by default */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+.gallery-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-card {
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .gallery-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+.class-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .class-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .class-image {
+            transition: transform 0.3s ease;
+        }
+
+        .class-card:hover .class-image {
+            transform: scale(1.05);
+        }

@@ -15,6 +15,33 @@ mobileMenuBtn.addEventListener("click", () => {
   }
   lucide.createIcons();
 });
+// Desktop Dropdown menus
+const dropdowns = document.querySelectorAll(".dropdown");
+dropdowns.forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".dropdown-toggle");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // Close other dropdowns
+    dropdowns.forEach((other) => {
+      if (other !== dropdown) {
+        other.classList.remove("active");
+      }
+    });
+    dropdown.classList.toggle("active");
+  });
+});
+
+// Close desktop dropdowns when clicking outside
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown = e.target.closest('.dropdown');
+  
+  if (!isClickInsideDropdown) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("active");
+    });
+  }
+});
 
 // Mobile dropdown menus - IMPROVED VERSION
 const mobileDropdowns = document.querySelectorAll(".mobile-dropdown");
@@ -41,6 +68,33 @@ mobileDropdowns.forEach((dropdown) => {
   });
 });
 
+// Close mobile dropdowns when clicking outside
+document.addEventListener("click", (e) => {
+  const isClickInsideMobileDropdown = e.target.closest('.mobile-dropdown');
+  
+  if (!isClickInsideMobileDropdown) {
+    mobileDropdowns.forEach((dropdown) => {
+      dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+    });
+  }
+});
+
+// Close mobile dropdown menus when scrolling - IMMEDIATE
+window.addEventListener('scroll', function() {
+  // Close mobile menu immediately on scroll
+  if (mobileMenu && mobileMenu.classList.contains('show')) {
+    mobileMenu.classList.remove('show');
+    if (menuIcon) {
+      menuIcon.setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
+    }
+  }
+
+  // Close all mobile dropdown menus immediately on scroll
+  mobileDropdowns.forEach((dropdown) => {
+    dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+  });
+}, { passive: true });
 // Close mobile dropdowns when clicking outside
 document.addEventListener("click", (e) => {
   const isClickInsideDropdown = e.target.closest('.mobile-dropdown');

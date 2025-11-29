@@ -16,31 +16,7 @@ mobileMenuBtn.addEventListener("click", () => {
   lucide.createIcons();
 });
 
-// Dropdown menus
-const dropdowns = document.querySelectorAll(".dropdown");
-dropdowns.forEach((dropdown) => {
-  const toggle = dropdown.querySelector(".dropdown-toggle");
-
-  toggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    // Close other dropdowns
-    dropdowns.forEach((other) => {
-      if (other !== dropdown) {
-        other.classList.remove("active");
-      }
-    });
-    dropdown.classList.toggle("active");
-  });
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener("click", () => {
-  dropdowns.forEach((dropdown) => {
-    dropdown.classList.remove("active");
-  });
-});
-
-// Mobile dropdown menus
+// Mobile dropdown menus - IMPROVED VERSION
 const mobileDropdowns = document.querySelectorAll(".mobile-dropdown");
 mobileDropdowns.forEach((dropdown) => {
   const toggle = dropdown.querySelector(".mobile-dropdown-toggle");
@@ -48,16 +24,50 @@ mobileDropdowns.forEach((dropdown) => {
 
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    // Close other mobile dropdowns
+    
+    const isCurrentlyOpen = !menu.classList.contains("hidden");
+    
+    // Close all mobile dropdowns first
     mobileDropdowns.forEach((other) => {
-      if (other !== dropdown) {
-        other.querySelector(".mobile-dropdown-menu").classList.add("hidden");
-      }
+      other.querySelector(".mobile-dropdown-menu").classList.add("hidden");
     });
-    menu.classList.toggle("hidden");
+    
+    // Toggle current dropdown
+    if (!isCurrentlyOpen) {
+      menu.classList.remove("hidden");
+    }
+    
     lucide.createIcons();
   });
 });
+
+// Close mobile dropdowns when clicking outside
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown = e.target.closest('.mobile-dropdown');
+  
+  if (!isClickInsideDropdown) {
+    mobileDropdowns.forEach((dropdown) => {
+      dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+    });
+  }
+});
+
+// Close mobile dropdown menus when scrolling - IMMEDIATE
+window.addEventListener('scroll', function() {
+  // Close mobile menu immediately on scroll
+  if (mobileMenu && mobileMenu.classList.contains('show')) {
+    mobileMenu.classList.remove('show');
+    if (menuIcon) {
+      menuIcon.setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
+    }
+  }
+
+  // Close all mobile dropdown menus immediately on scroll
+  mobileDropdowns.forEach((dropdown) => {
+    dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+  });
+}, { passive: true });
 
 // Contact modal
 const contactModal = document.getElementById("contact-modal");

@@ -4,17 +4,24 @@ lucide.createIcons();
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
-const menuIcon = mobileMenuBtn.querySelector("[data-lucide]");
+let menuIcon = null;
 
-mobileMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("show");
-  if (mobileMenu.classList.contains("show")) {
-    menuIcon.setAttribute("data-lucide", "x");
-  } else {
-    menuIcon.setAttribute("data-lucide", "menu");
-  }
-  lucide.createIcons();
-});
+if (mobileMenuBtn) {
+  menuIcon = mobileMenuBtn.querySelector("[data-lucide]");
+  mobileMenuBtn.addEventListener("click", () => {
+    if (mobileMenu) {
+      mobileMenu.classList.toggle("show");
+    }
+    if (menuIcon) {
+      if (mobileMenu && mobileMenu.classList.contains("show")) {
+        menuIcon.setAttribute("data-lucide", "x");
+      } else {
+        menuIcon.setAttribute("data-lucide", "menu");
+      }
+      lucide.createIcons();
+    }
+  });
+}
 // Desktop Dropdown menus
 const dropdowns = document.querySelectorAll(".dropdown");
 dropdowns.forEach((dropdown) => {
@@ -34,8 +41,8 @@ dropdowns.forEach((dropdown) => {
 
 // Close desktop dropdowns when clicking outside
 document.addEventListener("click", (e) => {
-  const isClickInsideDropdown = e.target.closest('.dropdown');
-  
+  const isClickInsideDropdown = e.target.closest(".dropdown");
+
   if (!isClickInsideDropdown) {
     dropdowns.forEach((dropdown) => {
       dropdown.classList.remove("active");
@@ -51,27 +58,30 @@ mobileDropdowns.forEach((dropdown) => {
 
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    
     const isCurrentlyOpen = !menu.classList.contains("hidden");
-    
-    // Close all mobile dropdowns first
+
     mobileDropdowns.forEach((other) => {
-      other.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+      const otherMenu = other.querySelector(".mobile-dropdown-menu");
+      const otherToggle = other.querySelector(".mobile-dropdown-toggle");
+      if (otherMenu) otherMenu.classList.add("hidden");
+      if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
     });
-    
-    // Toggle current dropdown
+
     if (!isCurrentlyOpen) {
       menu.classList.remove("hidden");
+      toggle.setAttribute("aria-expanded", "true");
+    } else {
+      toggle.setAttribute("aria-expanded", "false");
     }
-    
+
     lucide.createIcons();
   });
 });
 
 // Close mobile dropdowns when clicking outside
 document.addEventListener("click", (e) => {
-  const isClickInsideMobileDropdown = e.target.closest('.mobile-dropdown');
-  
+  const isClickInsideMobileDropdown = e.target.closest(".mobile-dropdown");
+
   if (!isClickInsideMobileDropdown) {
     mobileDropdowns.forEach((dropdown) => {
       dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
@@ -80,48 +90,39 @@ document.addEventListener("click", (e) => {
 });
 
 // Close mobile dropdown menus when scrolling - IMMEDIATE
-window.addEventListener('scroll', function() {
-  // Close mobile menu immediately on scroll
-  if (mobileMenu && mobileMenu.classList.contains('show')) {
-    mobileMenu.classList.remove('show');
-    if (menuIcon) {
-      menuIcon.setAttribute('data-lucide', 'menu');
-      lucide.createIcons();
+window.addEventListener(
+  "scroll",
+  function () {
+    const siteNav = document.querySelector(".site-nav");
+    if (siteNav) {
+      if (window.scrollY > 0) {
+        siteNav.classList.add("sticky-scrolled");
+      } else {
+        siteNav.classList.remove("sticky-scrolled");
+      }
     }
-  }
+    if (mobileMenu && mobileMenu.classList.contains("show")) {
+      mobileMenu.classList.remove("show");
+      if (menuIcon) {
+        menuIcon.setAttribute("data-lucide", "menu");
+        lucide.createIcons();
+      }
+    }
 
-  // Close all mobile dropdown menus immediately on scroll
-  mobileDropdowns.forEach((dropdown) => {
-    dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
-  });
-}, { passive: true });
-// Close mobile dropdowns when clicking outside
-document.addEventListener("click", (e) => {
-  const isClickInsideDropdown = e.target.closest('.mobile-dropdown');
-  
-  if (!isClickInsideDropdown) {
     mobileDropdowns.forEach((dropdown) => {
-      dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
+      const menu = dropdown.querySelector(".mobile-dropdown-menu");
+      const toggle = dropdown.querySelector(".mobile-dropdown-toggle");
+      if (menu) menu.classList.add("hidden");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
     });
-  }
-});
 
-// Close mobile dropdown menus when scrolling - IMMEDIATE
-window.addEventListener('scroll', function() {
-  // Close mobile menu immediately on scroll
-  if (mobileMenu && mobileMenu.classList.contains('show')) {
-    mobileMenu.classList.remove('show');
-    if (menuIcon) {
-      menuIcon.setAttribute('data-lucide', 'menu');
-      lucide.createIcons();
-    }
-  }
-
-  // Close all mobile dropdown menus immediately on scroll
-  mobileDropdowns.forEach((dropdown) => {
-    dropdown.querySelector(".mobile-dropdown-menu").classList.add("hidden");
-  });
-}, { passive: true });
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("active");
+    });
+  },
+  { passive: true }
+);
+// Close mobile dropdowns when clicking outside
 
 // Contact modal
 const contactModal = document.getElementById("contact-modal");
@@ -237,9 +238,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const mobileMenuLinks = document.querySelectorAll("#mobile-menu a");
 mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    mobileMenu.classList.remove("show");
-    menuIcon.setAttribute("data-lucide", "menu");
-    lucide.createIcons();
+    if (mobileMenu) {
+      mobileMenu.classList.remove("show");
+    }
+    if (menuIcon) {
+      menuIcon.setAttribute("data-lucide", "menu");
+      lucide.createIcons();
+    }
   });
 });
 
